@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<div class="jumbotron jumbotron-fluid userBox">
+		<div class="container d-flex justify-content-center">
+			<h1 class="display-4">Enter your username</h1>
+		</div>
+		<form action="/signin" method="post">
+			<div class="form-group">
+				<input type="text" class="form-control" name="username" id="username" placeholder="Username" aria-describedby="userHelp">
+			</div>
+			<button class="btn btn-primary" type="submit">Sign In</button>
+		</form>
+	</div>
+{% endblock %}

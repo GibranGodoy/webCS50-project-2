@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	{% if channels %}
+		<div class="container">
+			<h2>Channels</h2>
+		</div>
+	</br>
+		<div class="list-group">
+			{% for channel in channels %}
+				<a href="/channels/{{ channel }}" class="list-group-item list-group-item-action">{{ channel }}</a>
+			{% endfor %}
+		</div>
+	{% else %}
+		<div class="container">
+			<h2>There are no channels</h2>
+		</div>
+	{% endif %}
+{% endblock %}
